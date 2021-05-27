@@ -10,10 +10,10 @@ export default function Service({ navigation }) {
 
   return (
     <View>
-      <Button>Grooming</Button>
-      <Button>Day-care</Button>
-      <Button>Training</Button>
-      <Button>Goods</Button>
+      <Button onPress={() => alert("Grooming")}>Grooming</Button>
+      <Button onPress={() => alert("Day-care")}>Day-care</Button>
+      <Button onPress={() => alert("Training")}>Training</Button>
+      <Button onPress={() => alert("Pet Store")}>Pet Store</Button>
     </View>
   );
 }
