@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, handleChange } from "react";
 import { Text, View } from "react-native";
 import * as Mui from "@material-ui/core";
 import * as Muicons from "@material-ui/icons";
@@ -6,21 +6,46 @@ import * as Muicons from "@material-ui/icons";
 export default function Home({ navigation }) {
   const [payload, setPayload] = useState({
     breed: "",
+    petType: "",
   });
+  const [petType, setType] = useState("dog");
 
   const userInput = (prop) => (e) => {
     setPayload({ ...payload, [prop]: e.target.value });
   };
-
+  const handleChange = (event) => {
+    setType(event.target.value);
+  };
   const proceed = (e) => {
     navigation.navigate("Profile", {
       petBreed: payload.breed,
+      pet: petType,
     });
   };
 
   return (
     <View>
-      <Text> What is the breed of your dog? </Text>
+      <Mui.FormControl component="fieldset">
+        <Mui.FormLabel component="legend">Pet Type</Mui.FormLabel>
+        <Mui.RadioGroup
+          aria-label="pettype"
+          name="PetType"
+          value={petType}
+          onChange={handleChange}
+        >
+          <Mui.FormControlLabel
+            value="dog"
+            control={<Mui.Radio />}
+            label="Dog"
+          />
+          <Mui.FormControlLabel
+            value="cat"
+            control={<Mui.Radio />}
+            label="Cat"
+          />
+        </Mui.RadioGroup>
+      </Mui.FormControl>
+      <Text> What is the breed? </Text>
       <Mui.TextField
         type="text"
         label="Breed"

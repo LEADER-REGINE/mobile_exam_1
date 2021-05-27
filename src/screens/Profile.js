@@ -7,6 +7,7 @@ export default function Profile({ route }) {
     <View>
         <Text>
           Pet Breed: {route.params.petBreed}
+          Pet Type: {route.params.pet}
         </Text>
     </View>
   );
