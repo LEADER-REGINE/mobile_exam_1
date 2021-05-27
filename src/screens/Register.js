@@ -39,26 +39,27 @@ export default function Register({ navigation }) {
         .auth()
         .createUserWithEmailAndPassword(payload.email, payload.password)
         .then((signedInUser) => {
-            Alert.alert(
-              "Message" ,
-               "Registration Successful" + signedInUser.user.email,
-                [{ text: "OK" }],
-                { cancelable: false }
-        );
-            
+          Alert.alert(
+            "Message",
+            "Registration Successful",
+            [{ text: "OK" }],
+            { cancelable: false }
+          );
+
         })
-        .catch(err=>{
-            Alert.alert(
-                "Registration failed",
-               err.message,
-                [{ text: "OK" }],
-                { cancelable: false }
-        );
-    });
-}
+        .catch(err => {
+          Alert.alert(
+            "Registration failed",
+            err.message,
+            [{ text: "OK" }],
+            { cancelable: false }
+          );
+        });
+    }
   }
   return (
     <View style={styles.container}>
+      <Text style={styles.title}>PetHUB</Text>
       <Text style={styles.primaryText}>Create an Account</Text>
       <TextInput
         style={styles.textInput}
@@ -83,11 +84,9 @@ export default function Register({ navigation }) {
       <TouchableOpacity style={styles.btnRegister} onPress={register}>
         <Text style={styles.buttonText}> Register </Text>
       </TouchableOpacity>
-      <TouchableOpacity
-        style={styles.btnLogin}
-        onPress={() => navigation.navigate("Login")}
-      >
-        <Text style={styles.buttonText}> Log In </Text>
+      <TouchableOpacity style={styles.login_button} onPress={() => navigation.navigate("Login")}>
+        <Text style={styles.login_text}>Have an account? Login</Text>
+
       </TouchableOpacity>
     </View>
   );
@@ -119,16 +118,28 @@ const styles = StyleSheet.create({
     backgroundColor: "#381f1f",
     padding: 10,
   },
-  btnLogin: {
-    borderRadius: 10,
-    minWidth: 200,
-    marginTop: 15,
-    backgroundColor: "#046EE5",
-    padding: 10,
-  },
+
   buttonText: {
     fontSize: 15,
     color: "#ffffff",
     textAlign: "center",
   },
+  title: {
+    fontSize: 30,
+    top: 10,
+    paddingBottom: 30,
+    color: "#EE82EE",
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  login_button: {
+    marginTop: 10,
+
+  },
+  login_text: {
+    fontSize: 15,
+    color: "#EE82EE",
+    textAlign: "center",
+  }
+
 });
