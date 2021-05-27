@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import firebase from "./tabs/utils/firebase"
+import firebase from './utils/firebase'
 import {
   View,
   Text,
@@ -38,7 +38,10 @@ export default function Register({ navigation }) {
       firebase
         .auth()
         .createUserWithEmailAndPassword(payload.email, payload.password)
-        .then((signedInUser) => {
+        .then((userCredential) => {
+          // Signed in
+          var user = userCredential.user;
+          navigation.navigate("Login")
           Alert.alert(
             "Message",
             "Registration Successful",

@@ -2,18 +2,18 @@ import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 // import Register from "./Register"
 // import Home from "./Home"
-import firebase from '../utility/firebase'
+import firebase from "./utils/firebase"
 import { Alert, StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
 
 export default function Login({ navigation }) {
-    const [payload, SetPayload] = React.useState({
+    const [payload, setPayload] = React.useState({
         email: '',
         password: '',
 
 
     });
     const handleChange = (prop) => (text) => {
-        setPayload({ ...value, [prop]: text });
+        setPayload({ ...payload, [prop]: text });
 
     };
     const login = () => {
@@ -70,7 +70,7 @@ export default function Login({ navigation }) {
 
             </TouchableOpacity>
             <TouchableOpacity style={styles.register_button} onPress={() => navigation.navigate("Register")}>
-                <Text style={styles.login_text}>Don't have an account? Login</Text>
+                <Text style={styles.login_text}>Don't have an account? Register</Text>
 
             </TouchableOpacity>
 
