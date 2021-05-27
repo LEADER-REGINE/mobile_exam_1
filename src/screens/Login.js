@@ -22,25 +22,25 @@ export default function Login({ navigation }) {
                 "Login Failed",
                 "Wrong Username/Password",
             );
-           
+
         }
         else {
-            
+
             firebase.auth().signInWithEmailAndPassword(payload.email, payload.password)
-            .then((userCredential) => {
-              // Signed in
-              var user = userCredential.user;
-              "Message" ,
-              "Login Successful" ,
-               [{ text: "OK" }],
-               { cancelable: false }
-              navigation.navigate("Home");
-              // ...
-            })
-            .catch((error) => {
-              var errorCode = error.code;
-              var errorMessage = error.message;
-            });
+                .then((userCredential) => {
+                    // Signed in
+                    var user = userCredential.user;
+                    "Message",
+                        "Login Successful",
+                        [{ text: "OK" }],
+                        { cancelable: false }
+                    navigation.navigate("Home");
+                    // ...
+                })
+                .catch((error) => {
+                    var errorCode = error.code;
+                    var errorMessage = error.message;
+                });
         }
 
     };
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         top: 10,
         paddingBottom: 30,
-        color: "#EE82EE",
+        color: "#FFAD1C",
         alignItems: 'center',
         justifyContent: 'center',
     },
@@ -110,8 +110,8 @@ const styles = StyleSheet.create({
     login_button: {
         borderRadius: 5,
         minWidth: 200,
-      backgroundColor: "#046EE5",
-        
+        backgroundColor: "#FFAD1C",
+
         padding: 10,
         marginTop: 10,
 
@@ -121,13 +121,13 @@ const styles = StyleSheet.create({
         color: "#fff",
         textAlign: "center",
     },
-     register_button: {
-        marginTop:10,
-      
+    register_button: {
+        marginTop: 10,
+
     },
-    login_text:{
+    login_text: {
         fontSize: 15,
-        color:  "#EE82EE",
+        color: "#EE82EE",
         textAlign: "center",
     }
 
