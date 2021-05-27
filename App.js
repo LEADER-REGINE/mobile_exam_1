@@ -7,6 +7,7 @@ import Profile from "./src/screens/Profile";
 import Login from "./src/screens/Login";
 import Home from "./src/screens/Home";
 import Register from "./src/screens/Register";
+import Service from "./src/screens/Service";
 const Drawer = createDrawerNavigator();
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Drawer.Screen name="Register" component={Register} />
         <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Profile" component={Profile} />
+        <Drawer.Screen name="Services" component={Service} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

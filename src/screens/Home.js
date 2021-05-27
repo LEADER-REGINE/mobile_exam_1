@@ -21,6 +21,7 @@ export default function Home({ navigation }) {
                 <Text style={styles.font1}>Human</Text>
                 <TouchableOpacity
                     style={styles.button}  
+                    onPress={() => navigation.navigate('Service')}
                 >
                     <MaterialIcons name="pets" size={40} color="black" />
                 </TouchableOpacity>
