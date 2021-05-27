@@ -43,7 +43,7 @@ export default function Home({ navigation }) {
         onChange={userInput("breed")}
         value={payload.breed}
       />
-      <Button onClick={proceed}>PROCEED</Button>
+      <Button onPress={proceed}>PROCEED</Button>
     </View>
   );
 }
