@@ -104,27 +104,22 @@ const styles = StyleSheet.create({
   },
   primaryText: {
     fontSize: 24,
-    
   },
   textInput: {
-    height: 40,
-    borderColor: 'gray',
+    fontSize: 15,
     borderWidth: 1,
-    marginBottom: 10,
-    padding: 10,
-    minWidth: 250,
+    borderRadius: 10,
+    minWidth: 200,
+    marginTop: 15,
+    paddingLeft: 2,
+    borderColor: "#999999",
   },
   btnRegister: {
-    borderRadius: 5,
+    borderRadius: 10,
     minWidth: 200,
-    backgroundColor: "#046EE5",
+    marginTop: 15,
+    backgroundColor: "#381f1f",
     padding: 10,
-    marginTop: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.8,
-    shadowRadius: 40,
-    elevation: 3,
   },
 
   buttonText: {
@@ -136,17 +131,12 @@ const styles = StyleSheet.create({
     fontSize: 30,
     top: 10,
     paddingBottom: 30,
-    color: "#FFAD1C",
+    color: "#EE82EE",
     alignItems: 'center',
     justifyContent: 'center',
   },
   login_button: {
     marginTop: 10,
-     shadowColor: '#000',
-            shadowOffset: { width: 0, height: 4 },
-            shadowOpacity: 0.8,
-            shadowRadius: 40,
-            elevation: 3,
 
   },
   login_text: {

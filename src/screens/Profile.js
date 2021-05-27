@@ -1,5 +1,10 @@
 import React from "react";
 import { Text, View } from "react-native";
+import {
+    TextInput,
+    Button,
+    RadioButton,
+  } from "react-native-paper";
 
 export default function Profile({ route }) {
 
