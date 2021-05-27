@@ -1,7 +1,7 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import Register from "./Register"
-import Home from "./Home"
+// import Register from "./Register"
+// import Home from "./Home"
 import firebase from '../utility/firebase'
 import { Alert, StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
 
