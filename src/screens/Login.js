@@ -34,7 +34,7 @@ export default function Login({ navigation }) {
                         "Login Successful",
                         [{ text: "OK" }],
                         { cancelable: false }
-                    navigation.navigate("Home");
+                    navigation.navigate("Breed");
                     // ...
                 })
                 .catch((error) => {
